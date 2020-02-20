@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 20 Lut 2020, 14:01
+-- Czas generowania: 20 Lut 2020, 14:08
 -- Wersja serwera: 10.1.38-MariaDB
 -- Wersja PHP: 7.3.4
 
@@ -43,6 +43,26 @@ INSERT INTO `firstname` (`id`, `name`) VALUES
 (1, 'Janusz'),
 (2, 'Grażyna');
 
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `lastname`
+--
+
+CREATE TABLE `lastname` (
+  `id` int(11) NOT NULL,
+  `name` varchar(64) COLLATE utf8_polish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `lastname`
+--
+
+INSERT INTO `lastname` (`id`, `name`) VALUES
+(1, 'Brzęczyszczykiewicz'),
+(2, 'Kowalski'),
+(3, 'Nowak');
+
 --
 -- Indeksy dla zrzutów tabel
 --
@@ -54,6 +74,12 @@ ALTER TABLE `firstname`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `lastname`
+--
+ALTER TABLE `lastname`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -62,6 +88,12 @@ ALTER TABLE `firstname`
 --
 ALTER TABLE `firstname`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT dla tabeli `lastname`
+--
+ALTER TABLE `lastname`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
