@@ -41,6 +41,21 @@ for($i = 0 ; $i < 10 ; $i++) {
     echo '<br>';
 }
 
+function generujPESEL($plec) {
+    //$plec = {'m','k'}
+    $rok = rand(20,99);
+    $miesiac = rand(1,12);
+    $dzien = rand(1,28);
+    $porzadkowe = rand(100,999);
+    $nieparzyste = array(1,3,5,7,9);
+    $plecLiczba = $nieparzyste[rand(0,4)]; //losowa nieparzysta
+    if($plec == 'k') 
+        $plecLiczba --;
+    $pesel = $rok.$miesiac.$dzien.$porzadkowe.$plecLiczba; //string 10 znakowy
+    $pesel = str_split($pesel); //tablica 10 elementowa
+    
+}
+
 ?>
 
 </body>
